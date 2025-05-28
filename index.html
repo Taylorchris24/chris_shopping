@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- import spartan font from font awesome 17:27-->
+     <!-- Google Fonts: Spartan -->
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <style>
+        *{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52; 
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+   width: 100%;
+height: 15vh;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: fixed; z-index: 999; top: 0;
+    padding: 0 5%;
+    left: 0;
+}
+header .navbrand{
+    height: 70px; width: 70px;
+}
+header .navbar{
+    justify-content: center;
+    gap: 2%;
+}
+header li{
+   list-style-type: none;
+   padding: 0 20px;
+
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 16px; font-weight: 600;color: #1a1a1a;
+    transition: 0.3s ease;
+    position: relative;
+}
+header a:hover,header a.active{
+    color: #088178;
+}
+.navbar a.active::after,.navbar a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+}
+header #mobile{
+    display: none;
+
+}
+#mobile i{
+    width: 30%;
+    height: 2px;
+  color: #088178;
+}
+#close{
+    transition: display 0.3s ease-in-out;
+}
+    </style>
+
+    <header class="flexCenter">
+        <div>
+            <!-- same as class logo -->
+            <a href="./index.html"><img src="./images/landing-page/images (1).jpeg" alt="" class="navbrand"></a>
+        </div>
+        <nav>
+            <ul class="navbar flexCenter" id="navbar">
+                <!-- close button -->
+                <li id="close"><i class="bi bi-x-lg" style="position: relative; z-index: 1000;"></i></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="cart.html"><i class="bi bi-cart2"></i></a></li>
+
+            </ul>
+        </nav>
+        <div id="mobile">
+            <!--add a font awesome icon called shopping  -->
+            <a href="cart.html"><i class="bi bi-cart2"></i></a>
+            <!-- hangbuger menu -->
+            <i class="bi bi-menu-up" id="bar"></i>
+      
+        </div>
+    </header>
+
+    <!-- hero section -->
+     <style>
+        #hero{
+            /* background-image: url(./images/landing-page/images\ \(8\).jpeg); */
+            /* background-size: cover; background-position: top 25% right 0; */
+            /* padding: 0 80px; */
+            height: 85vh;
+            width: 100%;
+            background-color: rgba(193, 227, 242, 0.672);
+            margin-top: 15vh;
+           
+            justify-content: center;
+            gap: 20%;
+        }
+        #hero h4{
+            padding-bottom: 15px;
+        }
+        #hero h1{
+            color: #088178;
+            margin-bottom: 20px;
+        }
+        #hero button{
+            /* background-image: url();  background-color: transparent;  */
+            color: #088178; border: 0;
+            background-color: yellow;
+            padding: 14px 50px;
+            margin-top: 30px;
+            cursor: pointer;
+            font-size: 16px; font-weight: 700;
+        }
+    
+        .hero-div1{
+height: 80%;
+flex-direction: column; justify-content: center;
+align-items: flex-start;
+        }
+       
+        .hero-layout{
+          height: 80%;
+        }
+        .hero-layout img{
+            height: 100%;
+        }
+        .section-p1{
+            padding: 20px 80px;
+        }
+        .section-m1{
+            margin: 40px 0;
+        }
+
+        /* global styling for your button */
+        button.normal{
+            font-size: 14px; font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff; border-radius: 4px;
+            cursor: pointer; border: none;
+            transition: 0.3s ease;
+        }
+     </style>
+    <section id="hero" class="flexCenter">
+        <div class="hero-div1 flexCenter">
+            <h4>Trade in offer</h4>
+            <h2>super value deals</h2>
+            <h1>on all products</h1>
+            <p>save more with coupons & up to 70% off!</p>
+            <button>shop now</button>
+        </div>
+        <div class="hero-layout">
+            <img src="./images/landing-page/images (9).png" alt="">
+        </div>
+    </section>
+
+    <style>
+        #feature img{
+            height: 150px;
+        }
+        #feature .feat-box{
+            width: 180px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+            border: 1px solid #cce7d0;
+            border-radius: 4px; margin: 15px 0;
+        }
+        #feature .feat-box:hover{
+            box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+            
+        }
+        #feature .feat-box h6{
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1; color: #088178;
+            background-color: #fddde4;
+        }
+        #feature .feat-box:nth-child(2) h6{
+            background-color: #cdebbc;
+        }
+        #feature .feat-box:nth-child(3) h6{
+            background-color: #d1e8f2;
+        }
+        #feature .feat-box:nth-child(4) h6{
+            background-color: #cdd4f8;
+        }
+        #feature .feat-box:nth-child(5) h6{
+            background-color: #f6dbf6;
+        }
+        #feature .feat-box:nth-child(6) h6{
+            background-color: #fff2e5;
+        }
+
+        #feature .feat-box img{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #feature{
+            justify-content: space-between; flex-wrap: wrap;
+        }
+    </style>
+
+    <section id="feature" class="section-p1 flexCenter" >
+
+        <div class="feat-box">
+            <img src="./images/landing-page/images (4).jpeg" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+
+        <div class="feat-box">
+            <img src="./images/landing-page/images (1).jpeg" alt="">
+            <h6>online order</h6>
+        </div>
+
+        <div class="feat-box">
+            <img src="./images/landing-page/images (2).jpeg" alt="">
+            <h6>save money</h6>
+        </div>
+
+        <div class="feat-box">
+            <img src="./images/landing-page/images (10).jpeg" alt="">
+            <h6>promotions</h6>
+        </div>
+
+        <div class="feat-box">
+            <img src="./images/landing-page/images (13).jpeg" alt="">
+            <h6>happy sell</h6>
+        </div>
+
+        <div class="feat-box">
+            <img src="./images/landing-page/images (7).jpeg" alt="">
+            <h6>24/7 support</h6>
+        </div>
+    </section>
+
+    <style>
+        #product1{
+            text-align: center;
+        }
+        #product1 .pro{
+            height: 400px;
+            width: 23%; min-width:250px; padding: 10px 12px;
+            border: 1px solid #a2cab5;
+            border-radius: 25px; cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.03);
+            margin: 15px 0;
+            transition: 0.2s ease;
+            position: relative;
+        }
+        #product1 .pro:hover{
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.1);
+
+        }
+        #product1 .pro img{
+            width: 100%;
+            height: 70%;
+            border-radius: 20px;
+        }
+        #product1 .pro .des{
+            text-align: start;
+            padding: 10px 0 ;
+        }
+        #product1 .pro .des span{
+            color: #606063;
+        }
+        #product1 .pro .des h5{
+            padding-top:7px ;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #product1 .pro .des i{
+            font-size: 12px;
+            color: rgba(234,181,25);
+        }
+        #product1 .pro .des h4{
+            padding-top:7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+        #product1 .pro .cart{
+            width: 40px; height: 40px;
+            line-height: 40px; border-radius: 50%; 
+            background-color: #e8f6ea;
+            border: solid 1px #cce7d0; position: absolute;
+            bottom: 20px; right: 10px;
+            /* padding: 10 */
+            font-weight: 500; color: #088178;
+        }
+        #product1 .pro-container{
+            padding-top:20px ;
+            flex-wrap: wrap;
+        }
+    </style>
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer collection New mordern design</p>
+
+        <div class="pro-container flexCenter">
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (2).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+            
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (3).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (4).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (5).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (6).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (7).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (8).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (9).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        /* ////////////////////
+        share to chatgpt
+        */
+        #banner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; align-items: center;
+            text-align: center;
+            /* background-image: url(./images/landing-page/images.jpeg); */
+            width: 100%; height: 40vh;
+            /* background-size: cover; */
+            /* background-position: center; */
+            position: relative; z-index: 10;
+            /*  */
+            /* background-color: rgba(158, 79, 79, 0.535); */
+        }
+        #banner::after{
+            content: "";
+            background-image: url(./images/landing-page/images.jpeg);
+            width: 100%; height: 40vh;
+            background-size: cover;
+            background-position: center;
+            position: absolute;top: 0;
+             z-index: 1;
+             filter: brightness(0.5);
+        }
+        #banner > * {
+    position: relative;
+    z-index: 2;
+}
+
+        /* /////////////// */
+        #banner h4{
+            color: #fff;
+            font-size: 16px;
+        }
+        #banner h2{
+            color: #ffff;
+            font-size: 30px;
+            padding: 10px 0;
+        }
+        #banner h2 span{
+            color: #ef3636;
+        }
+        
+        #banner button:hover{
+            background-color: #088178;
+            color:#fff;
+        }
+    </style>
+    <!-- ask chatgpt -->
+    <section id="banner" class="section-m1"> 
+        <h4>Repair Services</h4>
+        <h2>up to <span>70% off</span> - All T-shirts % accessories</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer collection New mordern design</p>
+
+        <div class="pro-container flexCenter">
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (2).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+            
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (3).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (4).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (5).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (6).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (7).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (8).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+            <div class="pro">
+          
+                <img src="./images/landing-page/images (9).jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>cartoon astronaut T-shirt</h5>
+                    <div class="star">
+                        <!-- font awes icon ... 49:03 -->
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                        <i class="fas fa-star">**</i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"> <i class="fal fa-shopping-cart cart">**</i></a>
+            </div>
+
+        </div>
+    </section>
+    
+    <style>
+        #sm-banner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            /* flex-wrap: wrap; */
+
+        }
+        #sm-banner .banner-box{
+            /* border: solid red ; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; align-items: start;
+            color: white;
+            min-width: 580px;
+            /* padding: 30px; */
+            /* background-image: url(./images/landing-page/images.jpeg); */
+            width: 100%; height: 40vh;
+            /* background-size: cover; */
+            /* background-position: center; */
+            position: relative; z-index: 10;
+            box-sizing: border-box;
+        }
+
+        #sm-banner .banner-box::after{
+            content: "";
+            background-image: url(./images/landing-page/images.jpeg);
+            width: 100%; height: 40vh;
+            background-size: cover;
+            background-position: center;
+            position: absolute;top: 0;
+             z-index: 1;
+             filter: brightness(0.3);
+             /* padding: 30px; */
+             box-sizing: border-box;
+        }
+        #sm-banner .banner-box > *{
+            margin-left: 30px;
+            z-index: 3;
+        }
+      #sm-banner .banner-box h4{
+            color: white; font-size: 20px;
+            font-weight: 300;
+        }
+        #sm-banner .banner-box h2{
+            color: white; font-size: 28px;
+            font-weight: 800;
+        }
+        #sm-banner span{
+            color: white; font-size: 14px;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+        button.white{
+            font-size: 13px; font-weight: 600;
+            padding: 11px 18px;
+            color: white;
+            background-color:transparent;
+             /* border-radius: 4px; */
+            cursor: pointer; border: none;
+            transition: 0.3s ease;
+            border: 1px solid;
+        }
+        #sm-banner .banner-box:hover button{
+            background-color: #088178;
+            color: white;
+            border: 1px solid #088178;
+        }
+        #sm-banner #banner-box2::after{
+            background-image: url(./images/landing-page/images\ \(6\).jpeg)
+        }
+    </style>
+    <section id="sm-banner " class="section-p1 second-banner">
+        <div class="banner-box">
+            <h4>crazy deals</h4>
+            <h2>buy 1 get 1 free</h2>
+            <span>The best classic dress is on sale at cara</span>
+            <button class="white">learn more</button>
+        </div>
+
+        <div class="banner-box" id="banner-box2">
+            <h4>Spring/summer</h4>
+            <h2>upcoming season</h2>
+            <span>The best classic dress is on sale at cara</span>
+            <button class="white">collection</button>
+        </div>
+    </section>
+
+    <style>
+        #banner3{
+            gap: 30px;
+        }
+        #banner3 .banner-box{
+            /* border: solid red ; */
+            /* flex-direction: column; */
+            color: red;
+            /* min-width:30%; */
+            /* padding: 30px; */
+            /* background-image: url(./images/landing-page/images.jpeg); */
+            width: 100%; height: 30vh;
+            /* background-size: cover; */
+            /* background-position: center; */
+            position: relative; z-index: 4;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         
+        }
+
+        #banner3 .banner-box::after{
+            content: "";
+            background-image: url(./images/landing-page/images.jpeg);
+            width: 100%; height: 30vh;
+            background-size: cover;
+            background-position: center;
+            position: absolute;top: 0;
+             z-index: 1;
+             filter: brightness(0.3);
+             /* padding: 30px; */
+             
+             box-sizing: border-box;
+        }
+        #banner3 .banner-box> *{
+
+            z-index: 10; 
+            margin-left: 20px;
+            position: relative;
+            /* color: white; */
+        }
+        #banner3 .banner-box h2{
+            color: white;
+            font-weight: 900;
+            font-size: 22px;
+        }
+        #banner3 h3{
+            color: #ec544e;
+            font-weight: 800;
+            font-size: 15px;
+        }
+        #banner3 .banner-box2::after{
+            background-image: url(./images/landing-page/images\ \(2\).jpeg);
+        }
+        #banner3 .banner-box3::after{
+            background-image: url(./images/landing-page/images\ \(8\).jpeg);
+        }
+    </style>
+    <section id="banner3" class="flexCenter section-p1">
+        <div class="banner-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter collection -50% OFF</h3>
+        </div>  
+
+        <div class="banner-box banner-box2" >
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter collection -50% OFF</h3>
+        </div>  
+
+        <div class="banner-box banner-box3">
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter collection -50% OFF</h3>
+        </div>  
+    </section>
+
+    <style>
+        #newsLetter{
+            flex-wrap: wrap;
+           position: relative;
+            background-color: #041e422c;
+            width: 100%;
+            z-index: 2;
+        }
+        #newsLetter::after{
+            content: " ";
+            background-image: url(./images/landing-page/images\ \(6\).jpeg);
+            background-repeat: no-repeat;
+            background-position: 20% 30%;
+            background-size: cover; 
+            position: absolute;
+            z-index: 1;
+        }
+
+
+        #newsLetter{
+            /* border: solid red ; */
+            /* flex-direction: column; */
+            /* min-width:30%; */
+            /* padding: 30px; */
+            /* background-image: url(./images/landing-page/images.jpeg); */
+            width: 100%; height: 20vh;
+            /* background-size: cover; */
+            /* background-position: center; */
+            position: relative; z-index: 4;
+            box-sizing: border-box;
+         
+        }
+
+        #newsLetter::after{
+            content: "";
+            background-image: url(./images/landing-page/images.jpeg);
+            width: 100%; height: 20vh;
+            background-size: cover;
+            background-position: center;
+            position: absolute;top: 0; left: 0;
+             z-index: 1;
+             filter: brightness(0.3);
+             /* padding: 30px; */
+             
+             box-sizing: border-box;
+        }
+        #newsLetter > *{
+            z-index: inherit;
+        }
+        #newsLetter h4{
+            font-size: 22px; font-weight: 700;
+            color: white;
+        }
+
+        #newsLetter p{
+            font-size: 14px;
+            font-weight: 600;
+            color: #818e81;
+
+        }
+        #newsLetter p span{
+            color: #ffbd27;
+        }
+        #newsLetter input{
+            height: 3.125rem;
+            padding: 15px 1.25rem;
+            font-size: 16px;
+            width: 100%;
+            border: 1px dashed white;
+            outline: none;
+            border-radius:5px 0  0 5px;
+            background-color: white;
+            color: #088178;
+            
+        }
+        #newsLetter input::placeholder{
+            color:#088178; 
+        
+        }
+        #newsLetter button{
+            background-color: #088178;
+            color: #fff;
+            white-space: nowrap;
+            height: 3.125rem;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 0 5px 5px 0;
+        }
+        #newsLetter form{
+            width: 40%;
+        }
+    </style>
+    <section id="newsLetter" class="flexCenter section-p1">
+        <div class="newstext">
+            <h4>Sign up for newsLetters</h4>
+            <p>Get E-mail updates about our latest shop and <span> special offers. </span></p>
+        </div>
+        <form action="" class="form flexCenter">
+            <input type="text" name="" placeholder="your email address">
+            <button class="normal">Sign up</button>
+        </form>
+    </section>
+
+    <style>
+        footer {
+            position: relative;
+        }
+        footer .col{
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+             flex-direction: column;
+             align-items: flex-start;
+             margin-bottom: 20px;
+        }
+        footer img{
+            height: 80px; 
+        }
+        footer .logo{
+            margin-bottom: 30px;
+        }
+        footer h4{
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+        footer p{
+            font-size:13px;margin-bottom: 8px;
+        }
+        footer a { 
+            font-size: 13px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 10px;
+
+        }
+        footer .follow{
+            margin-bottom: 20px;
+        }
+        footer .follow i{
+            color: #465b52;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+        footer .follow i:hover, footer a:hover{
+            color: #088178;
+        }
+        footer .copy-right{
+            width: 100%;
+            /* border: solid; */
+            text-align: center;
+            color: #088178;
+        
+            bottom: 1px;
+        }
+        footer .install .row img{
+            border: 1px solid #088178;
+            border-radius: 6px;
+            height: 50px;
+            width: 150px;
+        }
+        footer .install img{
+            margin-top: 10px 0 15px ;
+        }
+    </style>
+    <footer class="section-p1">
+        <div class="flexCenter">
+
+        <div class="col">
+            <!-- navbrand -->
+            <img class="logo" src="./images/landing-page/images (11).jpeg" alt="">
+            <h4>contact</h4>
+            <p> <strong>Address: </strong> no.1 ebonyi state nigeria </p>
+            <p> <strong>Phone: </strong>+234504444555 </p>
+            <p> <strong>hours: </strong> 10:00 - 18:00, mon - sat</p>
+            <div class="follow">
+                <h4>follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f">**</i>
+                    <i class="fab fa-twitter">**</i>
+                    <i class="fab fa-instagram">**</i>
+                    <i class="fab fa-pinterest">**</i>
+                    <i class="fab fa-youtube">**</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>about</h4>
+            <a href="">About us</a>
+            <a href="">Delivery information</a>
+            <a href="">Privacy policy</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My account</h4>
+            <a href="">Sign In</a>
+            <a href="">View Cart</a>
+            <a href="">My Wishlist</a>
+            <a href="">Track My Order</a>
+            <a href="">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <P>From App Store Or Google Play</P>
+            <div class="row">
+                <!-- google play and app store logo -->
+                <img src="./images/landing-page/images (4).jpeg" alt="">
+                <img src="./images/landing-page/images (3).jpeg" alt="">
+            </div>
+            <p>secure payment gateway</p>
+            <!-- visa logo -->
+            <img src="./images/landing-page/images (5).jpeg" alt="">
+
+        </div>
+        </div>
+
+        <div class="copy-right">
+            <p>© 2025, the shopping app</p>
+        </div>
+    </footer>
+
+    <style>
+        /* media query
+        we first make the website responsive to the tablet devices, go to responsive screens on 
+        inspect and choose ipad mini
+        -while doing media query, also consider specifity and inheritance
+
+        */
+
+        /* ✅ Standard Media Query Breakpoints */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Styles for very small phones */
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Styles for small phones */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Styles for tablets */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Styles for small desktops/laptops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Styles for large screens */
+}
+
+
+
+        @media(max-width:799px) {
+            .section-p1 {
+                 padding: 40px 20px;
+            }
+            header .navbar{
+     flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100vh;
+  width: 300px;
+box-shadow: 0 40px 60px rgba(0,0,0,0.06);
+  background-color: #E3E6F3;
+  gap: 0px;
+  padding: 80px 0 0 20px;
+  transition: right 0.3s ease-in-out;
+}
+header li{
+    margin-bottom: 25px;
+}
+header #mobile{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+  
+}
+#hero{
+    height: initial;
+    flex-direction: column;
+    align-items: center;
+    /* padding:0 auto; */
+    margin-top: 15vh;
+    border: solid;
+            
+}
+#hero > *{
+    /* min-width: 500px; */
+}
+#hero img{
+    width: 80%;
+
+margin:50px 10%;
+}
+
+/* header #mobile li{
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+} */
+.navbar.action{
+    right: 0px;
+}
+.hero-div1 {
+
+    padding-top: 5vh;
+}
+#feature{
+    justify-content: center;
+}
+#feature .feat-box {
+    margin: 15px 15px;
+}
+#product1 .pro-container {
+
+    justify-content: center;
+   
+}
+#product1 .pro-container > *
+{
+    margin:15px;
+}
+
+
+
+        }
+    </style>
+
+    <script>
+        const bar = document.getElementById("bar");
+        const nav = document.getElementById("navbar")
+        const close = document.getElementById("close");
+
+ close.style.display="none"
+        // check if the navbAR IS SHOWING
+    
+            bar.addEventListener('click',()=>{
+                nav.classList.add("action");
+      close.style.display="inline"
+
+            })
+
+
+close.addEventListener('click', () => {
+    nav.classList.remove("action");
+    close.style.display="none"
+});
+    </script>
+</body>
+</html>
